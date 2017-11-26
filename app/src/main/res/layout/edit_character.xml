@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_layout"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+                                        xmlns:tools="http://schemas.android.com/tools"
+                                        android:id="@+id/activity_layout"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,8 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay"
-            tools:layout_editor_absoluteX="-2dp">
+            tools:layout_editor_absoluteX="8dp">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -41,12 +40,12 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="70dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp" />
+            android:layout_marginLeft="30dp"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="请选择一个图片"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="请选择一个图片作为人物头像"
+            android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/edit_icon_bg"
             app:layout_constraintTop_toTopOf="@+id/edit_icon_bg"
@@ -61,10 +60,8 @@
             android:background="@drawable/edit_icon_border"
             app:layout_constraintLeft_toLeftOf="@+id/edit_icon_bg"
             app:layout_constraintTop_toTopOf="@+id/edit_icon_bg"
-            app:layout_constraintRight_toRightOf="@+id/edit_icon_bg"
-            app:layout_constraintBottom_toBottomOf="@+id/edit_icon_bg"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintRight_toRightOf="@id/edit_icon_bg"
+            app:layout_constraintBottom_toBottomOf="@id/edit_icon_bg"/>
 
         <TextView
             android:id="@+id/edit_name_title"
@@ -72,30 +69,23 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:text="@string/title_name"
-            android:textColor="@color/pureBlack"
+            android:textColor="#6e6e6e"
             app:layout_constraintTop_toTopOf="@+id/edit_icon"
             app:layout_constraintLeft_toRightOf="@+id/edit_icon"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp" />
+            android:layout_marginLeft="20dp"/>
 
         <EditText
             android:id="@+id/edit_name"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:ems="5"
+            android:ems="6"
             android:maxLength="6"
             android:textSize="16sp"
             android:hint="请输入姓名"
             app:layout_constraintTop_toTopOf="@+id/edit_name_title"
             app:layout_constraintBottom_toBottomOf="@+id/edit_name_title"
             app:layout_constraintLeft_toRightOf="@+id/edit_name_title"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintVertical_bias="0.666"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="0.33"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginLeft="5dp"/>
 
         <TextView
             android:id="@+id/edit_sex_title"
@@ -103,12 +93,11 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:text="@string/title_sex"
-            android:textColor="@color/pureBlack"
+            android:textColor="#6e6e6e"
             app:layout_constraintTop_toBottomOf="@+id/edit_name_title"
             android:layout_marginTop="10dp"
             app:layout_constraintLeft_toRightOf="@+id/edit_icon"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp" />
+            android:layout_marginLeft="20dp"/>
 
         <RadioGroup
             android:id="@+id/edit_sex"
@@ -118,13 +107,13 @@
             app:layout_constraintTop_toTopOf="@+id/edit_sex_title"
             app:layout_constraintBottom_toBottomOf="@+id/edit_sex_title"
             app:layout_constraintLeft_toRightOf="@+id/edit_sex_title"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp">
+            android:layout_marginLeft="5dp">
             <RadioButton
                 android:id="@+id/edit_sex_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sex_male"
+                android:textColor="#6e6e6e"
                 android:textSize="16dp"
                 android:checked="true"/>
             <RadioButton
@@ -132,6 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sex_female"
+                android:textColor="#6e6e6e"
                 android:textSize="16dp"/>
         </RadioGroup>
 
@@ -141,24 +131,23 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:text="@string/title_date"
-            android:textColor="@color/pureBlack"
-            app:layout_constraintTop_toBottomOf="@+id/edit_sex_title"
+            android:textColor="#6e6e6e"
+            app:layout_constraintTop_toBottomOf="@id/edit_sex_title"
             android:layout_marginTop="10dp"
-            app:layout_constraintLeft_toRightOf="@+id/edit_icon"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp" />
+            app:layout_constraintLeft_toRightOf="@id/edit_icon"
+            android:layout_marginLeft="20dp"/>
 
         <EditText
             android:id="@+id/edit_date"
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:hint="请输入生卒年"
+            android:ems="8"
+            android:maxLength="12"
             android:textSize="16sp"
-            app:layout_constraintHorizontal_bias="0.08"
-            app:layout_constraintLeft_toLeftOf="@+id/edit_guideline"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_date_title" />
+            android:hint="请输入生卒年"
+            app:layout_constraintTop_toBottomOf="@+id/edit_date_title"
+            app:layout_constraintLeft_toLeftOf="@+id/edit_date_title"
+            app:layout_constraintRight_toRightOf="@+id/edit_name"/>
 
 
         <TextView
@@ -167,68 +156,47 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:text="@string/title_origin"
-            android:textColor="@color/pureBlack"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
+            android:textColor="#6e6e6e"
             app:layout_constraintTop_toBottomOf="@+id/edit_icon"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/edit_moreinfo_title"
-            android:layout_marginLeft="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.521" />
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="@+id/edit_icon"/>
 
         <EditText
             android:id="@+id/edit_origin"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
-            android:ems="5"
-            android:maxLines="1"
+            android:ems="6"
+            android:maxLength="20"
             android:textSize="16sp"
             android:hint="请输入籍贯"
-            app:layout_constraintTop_toTopOf="@+id/edit_origin_title"
-            app:layout_constraintBottom_toBottomOf="@+id/edit_origin_title"
-            android:layout_marginStart="10dp"
-            app:layout_constraintVertical_bias="0.45"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/edit_icon"
             app:layout_constraintLeft_toRightOf="@+id/edit_origin_title"
-            android:layout_marginEnd="8dp" />
+            app:layout_constraintRight_toRightOf="@+id/edit_force"
+            android:layout_marginLeft="10dp"/>
         <TextView
             android:id="@+id/edit_force_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="势力："
-            android:textColor="@color/pureBlack"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
+            android:text="@string/title_force"
+            android:textColor="#6e6e6e"
             app:layout_constraintTop_toBottomOf="@+id/edit_date"
-            android:layout_marginLeft="10dp"
-            app:layout_constraintLeft_toLeftOf="@+id/edit_guideline" />
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@id/edit_icon"
+            android:layout_marginLeft="20dp"/>
 
         <EditText
             android:id="@+id/edit_force"
-            android:layout_width="wrap_content"
+            android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:ems="5"
             android:maxLength="5"
             android:textSize="16sp"
             android:hint="请输入势力"
-            app:layout_constraintTop_toTopOf="@+id/edit_force_title"
-            app:layout_constraintBottom_toBottomOf="@+id/edit_force_title"
-            app:layout_constraintLeft_toRightOf="@+id/edit_force_title"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            app:layout_constraintVertical_bias="0.38"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="0.53"
-            android:layout_marginEnd="8dp" />
+            app:layout_constraintTop_toTopOf="@id/edit_force_title"
+            app:layout_constraintBottom_toBottomOf="@id/edit_force_title"
+            app:layout_constraintLeft_toRightOf="@id/edit_force_title"
+            android:layout_marginLeft="5dp"/>
 
         <TextView
             android:id="@+id/edit_moreinfo_title"
@@ -236,17 +204,15 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:text="@string/title_moreinfo"
-            android:textColor="@color/pureBlack"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/edit_origin"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="10dp" />
+            android:textColor="#6e6e6e"
+            app:layout_constraintTop_toBottomOf="@+id/edit_origin_title"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="@+id/edit_icon"/>
 
         <EditText
             android:id="@+id/edit_moreinfo"
-            android:layout_width="342dp"
-            android:layout_height="149dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:ems="15"
             android:lines="10"
             android:maxLines="10"
@@ -257,10 +223,8 @@
             android:textAlignment="viewStart"
             android:gravity="start"
             app:layout_constraintTop_toBottomOf="@+id/edit_moreinfo_title"
-            android:layout_marginTop="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:layout_editor_absoluteX="7dp" />
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/edit_moreinfo_title"/>
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
@@ -268,8 +232,8 @@
             android:id="@+id/edit_guideline"
             app:layout_constraintGuide_percent="0.5"
             android:orientation="vertical"
-            tools:layout_editor_absoluteY="81dp"
-            tools:layout_editor_absoluteX="180dp" />
+            tools:layout_editor_absoluteY="25dp"
+            tools:layout_editor_absoluteX="192dp" />
         <Button
             android:id="@+id/edit_confirm"
             android:layout_width="wrap_content"
@@ -299,14 +263,14 @@
     </android.support.constraint.ConstraintLayout>
 
     <!--<android.support.design.widget.NavigationView-->
-        <!--android:id="@+id/navigation_view"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_gravity="start"-->
-        <!--android:fitsSystemWindows="true"-->
-        <!--app:layout_constraintTop_toBottomOf="@id/toolbar"-->
-        <!--app:headerLayout="@layout/nav_header_main"-->
-        <!--app:menu="@menu/nav_main_edit">-->
+    <!--android:id="@+id/navigation_view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/toolbar"-->
+    <!--app:headerLayout="@layout/nav_header_main"-->
+    <!--app:menu="@menu/nav_main_edit">-->
 
     <!--</android.support.design.widget.NavigationView>-->
 
